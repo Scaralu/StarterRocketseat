@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 4 Rocketseat</title>
+    </head>
+    <body>
+
+        <script>
+            function experiencia(anos) {
+                switch (anos) {
+                    case 0:
+                        return 'Iniciante';
+                    case 1:
+                    case 2:
+                        return 'Intermediario';
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                        return 'Avançado';
+                    case 7:
+                        return 'Jedi Master';
+                    default:
+                        return 'Valor indevido';
+                }
+            }
+
+            var anosEstudo = experiencia(7);
+            console.log(anosEstudo);
+        </script>
+    </body>
+</html>

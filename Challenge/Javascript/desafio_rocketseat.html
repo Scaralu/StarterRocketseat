@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio Rocketseat</title>
+    </head>
+    <body>
+         <script>
+             <!--Desafio 1 - Rocketseat-->
+
+             function mostraEndereco(enderecoPessoa) {
+                 console.log("O usuário mora em "
+                 + enderecoPessoa.cidade
+                 + "/"
+                 + enderecoPessoa.uf
+                 + ", no bairro "
+                 + enderecoPessoa.bairro
+                 + ", na rua \""
+                 + enderecoPessoa.rua
+                 + "\" com número "
+                 + enderecoPessoa.numero);
+             }
+
+             var endereco = {
+                 rua: "Rua dos pinheiros",
+                 numero: 1293,
+                 bairro: "Centro",
+                 cidade: "São Paulo",
+                 uf: "SP"
+             }
+
+             var retorno = mostraEndereco(endereco);
+             console.log(retorno);
+        </script>
+    </body>
+</html>
