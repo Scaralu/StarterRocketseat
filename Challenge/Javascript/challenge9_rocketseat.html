@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nineth Challenge</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+        </div>
+        <script>
+            var containerElement = document.querySelector('div#app');
+            var listElement = document.createElement("ul");
+
+            var inputElement = document.querySelector('input[name=nome]');
+            var inputContent = []
+
+            function adicionar() {
+                var textElement = inputElement.value;
+                inputContent.push(textElement);
+                console.log(inputContent);
+
+                var newListElement = document.createElement('li');
+                newListElement.appendChild(document.createTextNode(textElement));
+                listElement.appendChild(newListElement);
+                inputElement.value = '';
+
+                console.log(listElement);
+            }
+
+            containerElement.appendChild(listElement);
+        </script>
+    </body>
 </html>

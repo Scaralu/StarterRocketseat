@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eighth Challenge</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            var containerElement = document.querySelector('#app');
+            var listElement = document.createElement("ul");
+
+            var nomes = ["Diego", "Lucca", "Gabriel"];
+
+            for (let i = 0; i < nomes.length ; i++) {
+                var newListElement = document.createElement("li");
+                var textElement = document.createTextNode(nomes[i])
+                newListElement.appendChild(textElement);
+                listElement.appendChild(newListElement);
+            }
+
+            containerElement.appendChild(listElement)
+        </script>
+    </body>
 </html>
