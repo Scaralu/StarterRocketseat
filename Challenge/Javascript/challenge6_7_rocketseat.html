@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sixth challenge</title>
+    </head>
+    <body>
+
+        <div class="fluor">
+            <div id="botao">
+            </div>
+        </div>
+
+        <script>
+            var externalContainerElement = document.querySelector(".fluor")
+            var containerElement = document.querySelector("#botao");
+            var buttonElement = document.createElement('button');
+            var textElement = document.createTextNode("Me pressione!");
+            buttonElement.setAttribute('onclick', "createNewRedBlock()");
+
+            buttonElement.appendChild(textElement);
+            containerElement.appendChild(buttonElement);
+
+            function createNewRedBlock() {
+                var redBlock = document.createElement("div");
+                redBlock.setAttribute("class", "box")
+                redBlock.style.width = "100px";
+                redBlock.style.height = "100px";
+                redBlock.style.backgroundColor = "#f00";
+                redBlock.setAttribute("onmouseenter", "this.style.backgroundColor = getRandomColor()");
+                externalContainerElement.appendChild(redBlock);
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+        </script>
+
+    </body>
+</html>
